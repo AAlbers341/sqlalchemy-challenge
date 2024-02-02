@@ -1,43 +1,52 @@
-Hawaii Trip
+# Hawaii Trip - Vacation Analysis
 
-Honolulu, Hawaii Vacation Analysis
-This is an analysis of time series temperature readings from various stations. To help plan this fictional trip, a climate analysis about this area helps outline how the weather is. 
+This project analyzes time series temperature readings from various stations in Honolulu, Hawaii. The goal is to provide valuable insights into the climate to help plan a fictional trip to this area.
 
-# Dependencies
-## %matplotlib inline
-## from matplotlib import style
-## style.use('fivethirtyeight')
-## import matplotlib.pyplot as plt
-## import numpy as np
-## import pandas as pd
-## import datetime as dt
+## Dependencies
 
-# Data
-## hawaii.sqlite Database
+- `%matplotlib inline`
+- `from matplotlib import style`
+- `style.use('fivethirtyeight')`
+- `import matplotlib.pyplot as plt`
+- `import numpy as np`
+- `import pandas as pd`
+- `import datetime as dt`
 
-Flask App 
-Designed Flask API based app to query the analysis from above. 
+## Data
 
-# Dependencies
-## import sqlalchemy
-## from sqlalchemy.ext.automap import automap_base
-## from sqlalchemy.orm import Session
-## from sqlalchemy import create_engine, func
-## import datetime as dt
-## from flask import Flask, jsonify
+### hawaii.sqlite Database
 
-# Documentation for Calls 
+The analysis is based on data stored in the `hawaii.sqlite` database.
 
-Availabe Routes:
-*Precipitation Scores
-/api/v1.0/precipitation
+## Flask App
 
-*Stations and Activity Amount
-/api/v1.0/stations
+A Flask API-based app has been designed to query the analysis results obtained above.
 
-*Precipitation Scores of Most Active Station
-/api/v1.0/tobs
+### Dependencies
 
-*Use routes below for 'start' date or 'start' to 'end' date
-/api/v1.0/
-/api/v1.0//
+- `import sqlalchemy`
+- `from sqlalchemy.ext.automap import automap_base`
+- `from sqlalchemy.orm import Session`
+- `from sqlalchemy import create_engine, func`
+- `import datetime as dt`
+- `from flask import Flask, jsonify`
+
+## Documentation for API Calls
+
+### Available Routes:
+
+1. Precipitation Scores:
+   - Endpoint: `/api/v1.0/precipitation`
+
+2. Stations and Activity Amount:
+   - Endpoint: `/api/v1.0/stations`
+
+3. Precipitation Scores of the Most Active Station:
+   - Endpoint: `/api/v1.0/tobs`
+
+4. Use the routes below for 'start' date or 'start' to 'end' date:
+
+   - Endpoint: `/api/v1.0/<start>`
+   - Endpoint: `/api/v1.0/<start>/<end>`
+
+Replace `<start>` and `<end>` with the desired date parameters.
